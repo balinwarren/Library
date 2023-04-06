@@ -16,6 +16,8 @@ const addBookToLibrary = (e) => {
 
   let book = new Book(title.value, author.value, pages.value, isRead.checked);
   myLibrary.push(book);
+  
+  closeBookForm();
 }
 
 //UI

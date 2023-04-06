@@ -7,8 +7,14 @@ function Book(title, author, pages, haveRead) {
   this.haveRead = haveRead;
 }
 
-function addBookToLibrary() {
-  
+const addBookToLibrary = () => {
+  let title = document.getElementById('title');
+  let author = document.getElementById('author');
+  let pages = document.getElementById('pages');
+  let isRead = document.getElementById('is-read');
+
+  let book = new Book(title.value, author.value, pages.value, isRead.checked);
+  myLibrary.push(book);
 }
 
 //UI
@@ -17,6 +23,7 @@ const addBookBtn = document.getElementById('add-book');
 const addBookForm = document.getElementById('add-book-form');
 const addBookModal = document.getElementById('addBookModal');
 const overlay = document.getElementById('overlay');
+const bookSubmit = document.getElementById('bookSubmit');
 
 const openBookForm = () => {
     addBookForm.reset();
@@ -31,3 +38,4 @@ const closeBookForm = () => {
 
 addBookBtn.onclick = openBookForm;
 overlay.onclick = closeBookForm;
+bookSubmit.onclick = addBookToLibrary;

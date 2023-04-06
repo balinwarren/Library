@@ -15,6 +15,40 @@
   <div class="container">
     <button id="add-book">+ Add Book</button>
   </div>
+  <div class="modal" id="addBookModal">
+    <form class="addBookForm">
+      <h3>Add new book</h3>
+      <input
+        class="input"
+        type="text"
+        id="title"
+        placeholder="Title"
+        required
+        maxlength="100"
+      />
+      <input
+        class="input"
+        type="text"
+        id="author"
+        placeholder="Author"
+        required
+        maxlength="100"
+      />
+      <input
+        class="input"
+        type="number"
+        id="pages"
+        placeholder="Pages"
+        required
+        max="10000"
+      />
+      <div class="isRead">
+        <label for="isRead">Have you read it?</label>
+        <input class="checkbox" type="checkbox" id="is-read">
+      </div>
+      <button class="btn" type="submit">Add book</button>
+    </form>
+  </div>
   <script src="./app.js"></script>
 </body>
 </html>

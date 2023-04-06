@@ -7,7 +7,8 @@ function Book(title, author, pages, haveRead) {
   this.haveRead = haveRead;
 }
 
-const addBookToLibrary = () => {
+const addBookToLibrary = (e) => {
+  e.preventDefault();
   let title = document.getElementById('title');
   let author = document.getElementById('author');
   let pages = document.getElementById('pages');

@@ -52,6 +52,8 @@ const createCards = () => {
         remove.innerHTML = "Remove";
         remove.classList.add('btn');
         remove.classList.add('remove-button');
+        remove.onclick = () => removeCards(i);
+
 
         bookCard.appendChild(title);
         bookCard.appendChild(author);
@@ -61,6 +63,11 @@ const createCards = () => {
 
         cardContainer.appendChild(bookCard);
     }
+}
+
+const removeCards = (i) => {
+    myLibrary.splice(i, 1);
+    createCards();
 }
 
 //UI

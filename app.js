@@ -1,6 +1,7 @@
 let myLibrary = [];
 const cardContainer = document.getElementById('cardContainer');
 
+//Book Constructor
 function Book(title, author, pages, haveRead) {
   this.title = title;
   this.author = author;
@@ -8,6 +9,7 @@ function Book(title, author, pages, haveRead) {
   this.haveRead = haveRead;
 }
 
+//Get form data function
 const addBookToLibrary = (e) => {
   e.preventDefault();
   let title = document.getElementById('title');
@@ -22,6 +24,7 @@ const addBookToLibrary = (e) => {
   createCards();
 }
 
+//Create DOM elements function
 const createCards = () => {
     while (cardContainer.firstChild) {
         cardContainer.removeChild(cardContainer.lastChild);
